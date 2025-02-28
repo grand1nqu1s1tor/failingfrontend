@@ -1,0 +1,12 @@
+<!-- 1-->
+<div *ngIf="isDivVisible">On-Off Div</div>
+<button (click)="changeVisibility()">Click to See</button>
+
+<!-- 2 -->
+<app-dynamic-list></app-dynamic-list>
+<br>
+
+<!-- sOme random shit -->
+<p> {{ serverCreationStatus}}</p>
+<input *ngIf ="takeName" type ="text" [(ngModel)]="testTWB">
+<button (click)="onCreateServer()" >Create Server</button>

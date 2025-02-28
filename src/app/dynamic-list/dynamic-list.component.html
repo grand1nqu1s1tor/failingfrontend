@@ -1,0 +1,23 @@
+<p>Add or Delete from the list!</p>
+<input [(ngModel)]="newInput" placeholder="Enter an element to add/delete">
+<button (click)="addToList()">Add</button>
+
+<ul>
+  <li *ngFor="let word of listOfWords">
+    {{ word }}
+  </li>
+</ul>
+
+
+<button (click)="removeFromList()">Remove</button>
+
+<!-- Q.) Show Odd elements + add dynamically -->
+<ul>
+  <li *ngFor="let num of showOddNumbers()"
+      [ngClass]="{odd: num % 2 === 1}"
+      [ngStyle]="{backGroundColor: num % 2 === 1 ? 'transparent' : 'blue'}">
+    {{ num }}
+  </li>
+</ul>
+<input type="number" placeholder="Enter a number" [(ngModel)]="addedNum">
+<button (click)="addNumber()">Click to add number to the nums array</button>
