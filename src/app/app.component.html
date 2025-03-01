@@ -10,3 +10,11 @@
 <p> {{ serverCreationStatus}}</p>
 <input *ngIf ="takeName" type ="text" [(ngModel)]="testTWB">
 <button (click)="onCreateServer()" >Create Server</button>
+
+
+<!-- 3.) Use custom directive -->
+<p customStyle>Style Me</p>
+<p betterCustomStyle> Style Me </p>
+
+<!-- 4.) Use custom if not structural directive -->
+<div *appCustomIfNotDirective="!takeName">Display only if takeName is false </div>

@@ -3,10 +3,22 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { DynamicListComponent } from './dynamic-list/dynamic-list.component'
 import { FormsModule } from '@angular/forms'
+import { CustomStyleDirective } from './dynamic-list/custom-directive/custom-style.directive';
+import { BetterCustomStyleDirective } from './dynamic-list/better-custom-directive/better-custom-style.directive';
+import { CustomIfNotDirective } from './custom-if-not-directive/custom-if-not.directive';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule, DynamicListComponent, FormsModule],
+  imports: [
+    RouterOutlet,
+    CommonModule,
+    DynamicListComponent,
+    FormsModule,
+    CustomStyleDirective,
+    BetterCustomStyleDirective,
+    CustomIfNotDirective,
+    ]
+    ,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
