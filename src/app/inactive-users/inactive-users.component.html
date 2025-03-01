@@ -1,0 +1,7 @@
+<p>The current inactive users are:</p>
+<ul>
+  <li *ngFor=" let user of users; let i= index;">
+    {{ user }}
+    <button (click)="onSetToActive(i)">Mark as inactive</button>
+  </li>
+</ul>

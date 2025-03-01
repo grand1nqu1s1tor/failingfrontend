@@ -8,8 +8,8 @@
 
 <!-- sOme random shit -->
 <p> {{ serverCreationStatus}}</p>
-<input *ngIf ="takeName" type ="text" [(ngModel)]="testTWB">
-<button (click)="onCreateServer()" >Create Server</button>
+<input *ngIf="takeName" type="text" [(ngModel)]="testTWB">
+<button (click)="onCreateServer()">Create Server</button>
 
 
 <!-- 3.) Use custom directive -->
@@ -17,4 +17,21 @@
 <p betterCustomStyle> Style Me </p>
 
 <!-- 4.) Use custom if not structural directive -->
-<div *appCustomIfNotDirective="!takeName">Display only if takeName is false </div>
+<div *appCustomIfNotDirective="!takeName">Display only if takeName is false</div>
+
+<!-- 5.) Example: Parent child component interaction -->
+<!-- Adding a UsersService which manages the active and inactive users -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <app-active-users>
+<!--        [users]="activeUsers"-->
+<!--        (userSetToInactive)="onSetToInactive($event)">-->
+      </app-active-users>
+      <app-inactive-users>
+<!--        [users]="inactiveUsers"-->
+<!--        (userSetToActive)="onSetToActive($event)">-->
+      </app-inactive-users>
+    </div>
+  </div>
+</div>
